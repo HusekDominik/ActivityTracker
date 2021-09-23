@@ -1,0 +1,50 @@
+.success_msg,
+.error_msg 
+    padding: 0.9rem 1.2rem
+    margin: 1rem 0
+    width: 100%
+    display: flex
+    flex: row
+    font-weight: bold
+    align-items: center
+    box-sizing: border-box
+
+    .notificationHolder 
+        color: #ffffff
+        flex-grow: 1
+        text-align: center
+	
+    .deleteNotification 
+        color: #ffffff
+        cursor: pointer
+	
+
+.success_msg 
+    background-color: $green
+    border-radius: $inputRadius
+
+.error_msg 
+    background-color: $red
+    border-radius: $inputRadius
+
+
+.success_msg.loginMessage,
+.success_msg.registerMessage,
+.error_msg.loginMessage,
+.error_msg.registerMessage 
+    width: 100%
+    max-width: none
+    box-sizing: border-box
+
+.randomButton 
+    border: 1px solid black
+    padding: 0.4rem 0.8rem
+    color: #ffffff
+
+    background: red
+
+    &:first-of-type 
+        background: green
+        margin-right: 1rem
+	
+

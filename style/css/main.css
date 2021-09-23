@@ -1,0 +1,361 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-form {
+  max-width: 560px;
+  width: 100%;
+  padding: 1.5rem;
+  border: 1px solid #5887ff;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+.container-form input {
+  width: calc(100%);
+  padding: 0 1rem;
+  height: 40px;
+  transition: 200ms ease-in-out;
+  margin: 1rem 0;
+  border: 0;
+  border: 1px solid #003049;
+  box-shadow: 0 0 10px 0 rgba(153, 181, 194, 0.31);
+  border-radius: 8px;
+  outline: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 0 2rem;
+  background-color: #003049;
+  height: 12vh;
+  box-sizing: border-box;
+}
+.header__imgLink img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
+.header__login-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 auto;
+  color: red;
+}
+.header__login-register img {
+  max-width: 30px;
+  width: 100%;
+  height: auto;
+}
+.header__login-register .logout, .header__login-register__register, .header__login-register__login {
+  text-decoration: none;
+  color: #e7ecef;
+  font-size: 1.3rem;
+  transition: all 200ms ease-in-out;
+  margin: 0 2rem;
+}
+.header__login-register .logout:hover, .header__login-register__register:hover, .header__login-register__login:hover {
+  opacity: 0.8;
+}
+.header__login-register__register {
+  margin: 0 2rem;
+}
+.header__login-register__login {
+  margin: 0rem;
+}
+.header__login-register .logout {
+  background-color: transparent;
+  margin: 0rem;
+  border: 0;
+  cursor: pointer;
+}
+.header__login-register .userNameSpan {
+  color: #e7ecef;
+  font-size: 1.3rem;
+  margin: 0 2rem;
+}
+@media screen and (max-width: 650px) {
+  .header__login-register {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: #003049;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    z-index: 999;
+    transform: translateX(100%);
+  }
+  .header__login-register.activatedMenu {
+    transition: 200ms all ease-in-out;
+    transform: translateX(0%);
+  }
+  .header__login-register a {
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+    background: black;
+  }
+  .header__login-register img {
+    display: none;
+  }
+  .header__login-register span {
+    height: 100px;
+    line-height: 100px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header {
+    height: 70px;
+  }
+}
+
+.success_msg,
+.error_msg {
+  padding: 0.9rem 1.2rem;
+  margin: 1rem 0;
+  width: 100%;
+  display: flex;
+  flex: row;
+  font-weight: bold;
+  align-items: center;
+  box-sizing: border-box;
+}
+.success_msg .notificationHolder,
+.error_msg .notificationHolder {
+  color: #ffffff;
+  flex-grow: 1;
+  text-align: center;
+}
+.success_msg .deleteNotification,
+.error_msg .deleteNotification {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.success_msg {
+  background-color: #62b375;
+  border-radius: 8px;
+}
+
+.error_msg {
+  background-color: #d64550;
+  border-radius: 8px;
+}
+
+.success_msg.loginMessage,
+.success_msg.registerMessage,
+.error_msg.loginMessage,
+.error_msg.registerMessage {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+.randomButton {
+  border: 1px solid black;
+  padding: 0.4rem 0.8rem;
+  color: #ffffff;
+  background: red;
+}
+.randomButton:first-of-type {
+  background: green;
+  margin-right: 1rem;
+}
+
+.taskContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.dataParentDiv {
+  flex-basis: 30%;
+  padding: 1.2rem;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #e7ecef;
+  background: #ffffff;
+  margin: 1rem 0;
+  border-radius: 1rem;
+}
+.dataParentDiv p {
+  line-height: 1.6;
+}
+.dataParentDiv .sameDivSize,
+.dataParentDiv .name-deleteDiv {
+  margin-bottom: 0.7rem;
+}
+.dataParentDiv .sameDivSize {
+  min-height: 25px;
+}
+.dataParentDiv .name-deleteDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.dataParentDiv .name-deleteDiv .deleteActivity {
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+}
+.dataParentDiv .name-deleteDiv .deleteActivity .circle {
+  border-radius: 100%;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  background-color: #e7ecef;
+  transition: all 200ms ease-in-out;
+  position: relative;
+}
+.dataParentDiv .name-deleteDiv .deleteActivity .circle:hover {
+  background-color: #d64550;
+}
+.dataParentDiv .name-deleteDiv .deleteActivity .circle:hover .xIcon {
+  color: #ffffff;
+}
+.dataParentDiv .name-deleteDiv .deleteActivity .circle .xIcon {
+  color: black;
+}
+.dataParentDiv .editDiv {
+  display: flex;
+  justify-content: flex-end;
+}
+.dataParentDiv .editDiv .editLink {
+  text-decoration: none;
+  color: black;
+}
+.dataParentDiv .editDiv .editLink:hover {
+  opacity: 0.8;
+}
+
+.infoStyle {
+  font-weight: bold;
+}
+
+.app {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.bodyContainer {
+  padding: 2rem 0;
+}
+
+body {
+  background: #e7ecef;
+}
+
+/*# sourceMappingURL=main.css.map */

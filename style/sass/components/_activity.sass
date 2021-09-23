@@ -1,0 +1,73 @@
+.taskContainer
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.dataParentDiv 
+    flex-basis: 30%
+    padding: 1.2rem
+    min-width: 320px
+    display: flex
+    flex-direction: column
+    border: 3px solid $white
+    background: #ffffff
+    margin: 1rem 0
+    border-radius: 1rem
+
+    p
+        line-height: 1.6
+		
+    .sameDivSize,
+    .name-deleteDiv 
+        margin-bottom: 0.7rem
+    
+    .sameDivSize 
+        min-height: $circleHeight
+    
+    .name-deleteDiv 
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+
+        .deleteActivity 
+            text-decoration: none
+            transition: all 200ms ease-in-out
+
+            .circle 
+                border-radius: 100%
+                height: $circleHeight
+                width: $circleHeight
+                display: flex
+                justify-content: center
+                align-items: center
+                flex-direction: column
+                text-decoration: none
+                background-color: $white
+                transition: all 200ms ease-in-out
+                position: relative
+
+                &:hover 
+                    background-color: $red
+                
+                &:hover .xIcon 
+                    color: #ffffff
+                
+                .xIcon 
+                    color: black
+                
+    
+    .editDiv 
+        display: flex
+        justify-content: flex-end
+        .editLink 
+            text-decoration: none
+            color: black
+            &:hover 
+                opacity: 0.8
+            
+        
+    
+
+.infoStyle 
+    font-weight: bold
